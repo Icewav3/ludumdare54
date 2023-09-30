@@ -1,3 +1,2 @@
-res://MainMenu.tscn
-res://StateManager.gd
 res://scenes/level_1.tscn
+res://MainMenu.tscn
