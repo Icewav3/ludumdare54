@@ -10,3 +10,5 @@ script = ExtResource("1_xwmqt")
 position = Vector2(377.5, 124.5)
 scale = Vector2(0.976563, 0.929687)
 texture = ExtResource("2_7h2uw")
+
+[node name="Node2D" type="Node2D" parent="."]
