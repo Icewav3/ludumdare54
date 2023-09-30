@@ -10,10 +10,9 @@ New Text Document.txt::TextFile::-1::1696092818::0::1::::<><>::
 level_1.tscn::PackedScene::8860839832919961330::1696096691::0::1::::<><>::uid://ct6yairkk862p::::res://sprites/Tilemaps/FloorTiles.png<>uid://kdjifcso623u::::res://scenes/player.tscn
 MainMenu.tscn::PackedScene::3609065265787276272::1696094782::0::1::::<><>::uid://baf3r1v1mq0b2::::res://icon.svg<>res://StateManager.gd
 player.tscn::PackedScene::708642575472797008::1696096705::0::1::::<><>::
-::res://sprites/::1696096714
+::res://sprites/::1696096930
+E53E2C48-3C89-41FF-ACC1-E0BBE1788C61.png::CompressedTexture2D::5605072801617853369::1696096930::1696096968::1::::<><>::
 New Text Document.txt::TextFile::-1::1696092666::0::1::::<><>::
-::res://sprites/Player/::1696096715
-player1.png::::-1::0::0::0::::<><>::
 ::res://sprites/Tilemaps/::1696096094
 FloorTiles2.png::CompressedTexture2D::2119641664644550819::1696096079::1696096094::1::::<><>::
 FloorTiles.png::CompressedTexture2D::6171882761628593225::1696094353::1696095268::1::::<><>::
