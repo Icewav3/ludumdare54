@@ -6,7 +6,11 @@
 [node name="Scene" type="Node2D"]
 script = ExtResource("1_drkql")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="testsprite" type="Sprite2D" parent="."]
 position = Vector2(377.5, 124.5)
 scale = Vector2(0.976563, 0.929687)
 texture = ExtResource("1_2wtxe")
+
+[node name="MainMenu" type="Node2D" parent="."]
+
+[node name="Level1" type="Node2D" parent="."]
