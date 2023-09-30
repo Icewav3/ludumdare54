@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://broi1o7hvjr6w"]
+[gd_scene load_steps=3 format=3 uid="uid://6fbgf0kosrqu"]
 
 [ext_resource type="Texture2D" uid="uid://baf3r1v1mq0b2" path="res://icon.svg" id="1_2wtxe"]
 [ext_resource type="Script" path="res://StateManager.gd" id="1_drkql"]
@@ -10,7 +10,3 @@ script = ExtResource("1_drkql")
 position = Vector2(377.5, 124.5)
 scale = Vector2(0.976563, 0.929687)
 texture = ExtResource("1_2wtxe")
-
-[node name="MainMenu" type="Node2D" parent="."]
-
-[node name="Level1" type="Node2D" parent="."]
