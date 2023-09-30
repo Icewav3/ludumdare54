@@ -238,6 +238,7 @@ nodes/TimeSeek/position = Vector2(140, 160)
 node_connections = [&"output", 0, &"TimeSeek", &"TimeSeek", 0, &"StateMachine"]
 
 [node name="Player" type="CharacterBody2D"]
+scale = Vector2(0.7, 0.7)
 script = ExtResource("1_htlyx")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
