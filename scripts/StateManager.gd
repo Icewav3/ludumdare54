@@ -3,7 +3,7 @@ extends Node2D
 @export var debug : bool
 
 var levels = {}
-var state = {"menulevel": preload("res://scenes/MainMenu.tscn"), "level1": preload("res://scenes/level_1.tscn")}
+var state = {"menulevel": preload("res://scenes/MainMenu.tscn"), "level1": preload("res://scenes/level_1.tscn"), "level2": preload("res://scenes/level_2.tscn"), "level3": preload("res://scenes/level_3.tscn")}
 var currentState
 
 # Called when the node enters the scene tree for the first time.

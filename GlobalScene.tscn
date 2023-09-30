@@ -5,6 +5,7 @@
 
 [node name="Scene" type="Node2D"]
 script = ExtResource("1_xwmqt")
+debug = null
 
 [node name="testsprite" type="Sprite2D" parent="."]
 position = Vector2(377.5, 124.5)
