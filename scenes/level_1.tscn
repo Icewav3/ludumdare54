@@ -1,3 +1,90 @@
-[gd_scene format=3 uid="uid://dyii0cri0jx83"]
+[gd_scene load_steps=14 format=3 uid="uid://dyii0cri0jx83"]
+
+[ext_resource type="Texture2D" uid="uid://ct6yairkk862p" path="res://sprites/Tilemaps/FloorTiles.png" id="1_3jsid"]
+[ext_resource type="PackedScene" uid="uid://kdjifcso623u" path="res://scenes/player.tscn" id="2_2ar4p"]
+[ext_resource type="Texture2D" uid="uid://b6eirurl8va82" path="res://sprites/walls/BottomWall.png" id="2_ca8pe"]
+[ext_resource type="Texture2D" uid="uid://ib1nfflxwjr7" path="res://sprites/walls/midwall.png" id="3_6uvea"]
+[ext_resource type="Texture2D" uid="uid://bbxtl7mmwiayw" path="res://sprites/walls/topwall.png" id="5_ey2jr"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l3mtm"]
+texture = ExtResource("1_3jsid")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_qr78t"]
+sources/0 = SubResource("TileSetAtlasSource_l3mtm")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t0l11"]
+texture = ExtResource("2_ca8pe")
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_k16ia"]
+sources/0 = SubResource("TileSetAtlasSource_t0l11")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cfpvn"]
+texture = ExtResource("3_6uvea")
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_f3bqy"]
+sources/0 = SubResource("TileSetAtlasSource_cfpvn")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_heou3"]
+texture = ExtResource("5_ey2jr")
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_o6x25"]
+sources/0 = SubResource("TileSetAtlasSource_heou3")
 
 [node name="Level1" type="Node2D"]
+
+[node name="Black" type="ColorRect" parent="."]
+offset_right = 320.0
+offset_bottom = 192.0
+color = Color(0, 0, 0, 1)
+
+[node name="FloorTilemap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_qr78t")
+format = 2
+layer_0/tile_data = PackedInt32Array(327687, 0, 0, 393223, 0, 1, 458759, 0, 2, 524295, 0, 3, 327688, 65536, 0, 393224, 65536, 1, 458760, 65536, 2, 524296, 65536, 3, 327689, 131072, 0, 393225, 131072, 1, 458761, 131072, 2, 524297, 131072, 3, 327690, 196608, 0, 393226, 196608, 1, 458762, 196608, 2, 524298, 196608, 3, 327691, 262144, 0, 393227, 262144, 1, 458763, 262144, 2, 524299, 262144, 3)
+
+[node name="BottomWall" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_k16ia")
+format = 2
+layer_0/tile_data = PackedInt32Array(262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0)
+
+[node name="MidWall" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_f3bqy")
+format = 2
+layer_0/tile_data = PackedInt32Array(131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0, 131083, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196618, 0, 0, 196619, 0, 0)
+
+[node name="TopWall" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_o6x25")
+format = 2
+layer_0/tile_data = PackedInt32Array(65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 65547, 0, 0)
+
+[node name="Player" parent="." instance=ExtResource("2_2ar4p")]
+position = Vector2(153, 112)
+scale = Vector2(0.7, 0.7)

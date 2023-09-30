@@ -1,8 +1,10 @@
 [gd_scene load_steps=2 format=3 uid="uid://kdjifcso623u"]
 
-[ext_resource type="Texture2D" uid="uid://cl4ey3bcxolfd" path="res://sprites/E53E2C48-3C89-41FF-ACC1-E0BBE1788C61.png" id="1_xbhpn"]
+[ext_resource type="Texture2D" uid="uid://t66wrolv5n2o" path="res://sprites/main character side view.png" id="1_w5ysd"]
 
 [node name="Player" type="CharacterBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_xbhpn")
+texture = ExtResource("1_w5ysd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
