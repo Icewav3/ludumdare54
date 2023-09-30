@@ -177,7 +177,7 @@ animation = &"IdleLeft"
 animation = &"IdleRight"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_os7mc"]
-animation = &"IdleRight"
+animation = &"IdleUp"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_t6owl"]
 animation = &"IdleDown"

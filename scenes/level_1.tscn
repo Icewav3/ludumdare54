@@ -1,7 +1,78 @@
-[gd_scene load_steps=2 format=3 uid="uid://crfjuy5nxnohg"]
+[gd_scene load_steps=11 format=3 uid="uid://crfjuy5nxnohg"]
 
 [ext_resource type="PackedScene" uid="uid://bs6oe80hi2165" path="res://scenes/player.tscn" id="1_fmxc3"]
+[ext_resource type="Texture2D" uid="uid://doki406amgjeq" path="res://sprites/walls/FloorTiles.png" id="2_orvwo"]
+[ext_resource type="Texture2D" uid="uid://bbxtl7mmwiayw" path="res://sprites/walls/topwall.png" id="3_5x3e2"]
+[ext_resource type="Texture2D" uid="uid://ib1nfflxwjr7" path="res://sprites/walls/midwall.png" id="4_rppw0"]
+[ext_resource type="Texture2D" uid="uid://b6eirurl8va82" path="res://sprites/walls/BottomWall.png" id="5_3jv60"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rjm5b"]
+texture = ExtResource("2_orvwo")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3g6hc"]
+texture = ExtResource("3_5x3e2")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y863v"]
+texture = ExtResource("4_rppw0")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y3vbx"]
+texture = ExtResource("5_3jv60")
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_bi4a0"]
+sources/0 = SubResource("TileSetAtlasSource_rjm5b")
+sources/5 = SubResource("TileSetAtlasSource_3g6hc")
+sources/6 = SubResource("TileSetAtlasSource_y863v")
+sources/7 = SubResource("TileSetAtlasSource_y3vbx")
 
 [node name="Level1" type="Node2D"]
 
+[node name="Black" type="ColorRect" parent="."]
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 321.0
+offset_bottom = 193.0
+color = Color(0, 0, 0, 1)
+
+[node name="Lvl1Tilemap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_bi4a0")
+format = 2
+layer_0/tile_data = PackedInt32Array(327688, 65536, 0, 393224, 65536, 1, 458760, 65536, 2, 524296, 65536, 3, 327689, 131072, 0, 393225, 131072, 1, 458761, 131072, 2, 524297, 131072, 3, 327690, 196608, 0, 393226, 196608, 1, 458762, 196608, 2, 524298, 196608, 3, 327691, 262144, 0, 393227, 262144, 1, 458763, 262144, 2, 524299, 262144, 3, 65544, 5, 0, 65545, 5, 0, 65546, 5, 0, 65547, 5, 0, 196616, 6, 0, 131080, 6, 0, 131081, 6, 0, 131082, 6, 0, 131083, 6, 0, 196619, 6, 0, 196618, 6, 0, 196617, 6, 0, 262152, 7, 0, 262153, 7, 0, 262154, 7, 0, 262155, 7, 0)
+
+[node name="Box" type="ReferenceRect" parent="."]
+offset_left = 127.0
+offset_top = 15.0
+offset_right = 193.0
+offset_bottom = 145.0
+border_color = Color(1, 1, 1, 1)
+editor_only = false
+
 [node name="Player" parent="." instance=ExtResource("1_fmxc3")]
+position = Vector2(160, 96)
