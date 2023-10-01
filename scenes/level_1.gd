@@ -4,7 +4,9 @@ var state
 @onready var effect = get_tree().root.get_node("GlobalScene/EffectsPlayer")
 var globalScene = preload("res://scripts/StateManager.gd")
 
+
 func _ready():
+	$Player.set_physics_process(false)
 	state = globalScene.get_data()
 	effect.play_sound("hum")
 

@@ -51,3 +51,4 @@ func show_dialogue(value : bool):
 	else:
 		character_sprite.visible = false
 		$DialogBox.visible = false
+		get_parent().get_node("Player").set_physics_process(true)
