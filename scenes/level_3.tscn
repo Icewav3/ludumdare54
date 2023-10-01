@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://blel7xem5p4no"]
 
 [ext_resource type="Texture2D" uid="uid://b6dqsxq3a0tj4" path="res://sprites/Tilemaps/lv3tileset.png" id="1_ss5hq"]
-[ext_resource type="Texture2D" uid="uid://bykvkqvs8duap" path="res://sprites/Main character front view.png" id="2_kod87"]
+[ext_resource type="PackedScene" uid="uid://bs6oe80hi2165" path="res://scenes/player.tscn" id="2_rjn3j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_36snd"]
 texture = ExtResource("1_ss5hq")
@@ -39,6 +39,5 @@ tile_set = SubResource("TileSet_xta6b")
 format = 2
 layer_0/tile_data = PackedInt32Array(458760, 131072, 2, 524296, 131072, 3, 458761, 196608, 2, 524297, 196608, 3, 458762, 131072, 2, 524298, 131072, 3, 458763, 196608, 2, 524299, 196608, 3, 327690, 131072, 2, 393226, 131072, 3, 327691, 196608, 2, 393227, 196608, 3, 327688, 131072, 2, 393224, 131072, 3, 327689, 196608, 2, 393225, 196608, 3, 196616, 0, 2, 196617, 65536, 2, 196618, 0, 2, 196619, 65536, 2, 131082, 0, 2, 131083, 65536, 2, 131080, 0, 2, 131081, 65536, 2, 65544, 0, 1, 65545, 65536, 1, 65546, 0, 1, 65547, 65536, 1, 262152, 0, 3, 262153, 65536, 3, 262154, 0, 3, 262155, 65536, 3)
 
-[node name="MainCharacterFrontView" type="Sprite2D" parent="."]
-position = Vector2(160, 97)
-texture = ExtResource("2_kod87")
+[node name="Player" parent="." instance=ExtResource("2_rjn3j")]
+position = Vector2(161, 106)
