@@ -11,7 +11,10 @@ func _ready():
 	for v in children:
 		if v is TextureButton:
 			buttonlist.append(v)
-
+			
+			
+	for item in buttonlist:
+		item.connect("button_press",Callable(self,"on_button_press"))
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -23,3 +26,5 @@ func _process(delta):
 			playersolution.append(int(index))
 			print(playersolution)'''
 			
+func on_button_press(number):
+	print(number)

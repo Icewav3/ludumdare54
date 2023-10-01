@@ -18,7 +18,6 @@ func complete_level():
 	add_child(state["level2"].instantiate())
 	set_process(false)
 
-
 func _on_button_button_down():
 	$Buttons/Button.disabled = true
 	$Player.set_physics_process(false)

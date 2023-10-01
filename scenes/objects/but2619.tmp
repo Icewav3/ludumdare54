@@ -1,15 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://8ngpp18n81c"]
+[gd_scene load_steps=6 format=3 uid="uid://8ngpp18n81c"]
 
 [ext_resource type="Texture2D" uid="uid://bvex4uvsjqjma" path="res://sprites/Elevator panel.png" id="1_su8mq"]
 [ext_resource type="Script" path="res://scripts/buttonManager.gd" id="1_wrmkc"]
 [ext_resource type="Texture2D" uid="uid://cvm452ugpci86" path="res://sprites/Button 1 out.png" id="2_st5u7"]
-[ext_resource type="Texture2D" uid="uid://bwv85154fxbem" path="res://scenes/objects/Button pushed out1.png" id="3_b4ssm"]
 [ext_resource type="Texture2D" uid="uid://blr5cv444ec7w" path="res://sprites/Button 1 pushed in.png" id="3_ywach"]
 [ext_resource type="Script" path="res://scenes/objects/button.gd" id="5_0cibt"]
-[ext_resource type="Texture2D" uid="uid://j48pj1vvt62b" path="res://scenes/objects/Button pushed out2.png" id="6_t78qe"]
-[ext_resource type="Texture2D" uid="uid://boc8onch4nabn" path="res://scenes/objects/Button pushed out3.png" id="7_fdnhs"]
-[ext_resource type="Texture2D" uid="uid://dwpxjpp2i2ncf" path="res://scenes/objects/Button pushed out4.png" id="8_7w81s"]
-[ext_resource type="Texture2D" uid="uid://dseulbpqq0mu6" path="res://scenes/objects/Button pushed out5.png" id="9_48pbj"]
 
 [node name="ButtonPanel" type="Node2D"]
 script = ExtResource("1_wrmkc")
@@ -29,7 +24,7 @@ offset_left = 95.0
 offset_top = 38.0
 offset_right = 108.0
 offset_bottom = 50.0
-texture_normal = ExtResource("3_b4ssm")
+texture_normal = ExtResource("2_st5u7")
 texture_pressed = ExtResource("3_ywach")
 script = ExtResource("5_0cibt")
 
@@ -38,7 +33,7 @@ offset_left = 111.0
 offset_top = 38.0
 offset_right = 124.0
 offset_bottom = 50.0
-texture_normal = ExtResource("6_t78qe")
+texture_normal = ExtResource("2_st5u7")
 texture_pressed = ExtResource("3_ywach")
 script = ExtResource("5_0cibt")
 
@@ -47,7 +42,7 @@ offset_left = 126.0
 offset_top = 38.0
 offset_right = 139.0
 offset_bottom = 50.0
-texture_normal = ExtResource("7_fdnhs")
+texture_normal = ExtResource("2_st5u7")
 texture_pressed = ExtResource("3_ywach")
 script = ExtResource("5_0cibt")
 
@@ -56,7 +51,7 @@ offset_left = 95.0
 offset_top = 53.0
 offset_right = 108.0
 offset_bottom = 65.0
-texture_normal = ExtResource("8_7w81s")
+texture_normal = ExtResource("2_st5u7")
 texture_pressed = ExtResource("3_ywach")
 script = ExtResource("5_0cibt")
 
@@ -65,7 +60,7 @@ offset_left = 111.0
 offset_top = 53.0
 offset_right = 124.0
 offset_bottom = 65.0
-texture_normal = ExtResource("9_48pbj")
+texture_normal = ExtResource("2_st5u7")
 texture_pressed = ExtResource("3_ywach")
 script = ExtResource("5_0cibt")
 
