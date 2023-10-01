@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bx11ku8p3he4p"
-path="res://.godot/imported/purplefloorbase.png-078f1e8ae1a3b4f5a057df604d3c1f76.ctex"
+uid="uid://b0pxjg1vt4y3u"
+path="res://.godot/imported/Mc placeholder sprite1.png-52a65ade16ec29dae717cd81d5b78663.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/walls/purplefloorbase.png"
-dest_files=["res://.godot/imported/purplefloorbase.png-078f1e8ae1a3b4f5a057df604d3c1f76.ctex"]
+source_file="res://sprites/mc/Mc placeholder sprite1.png"
+dest_files=["res://.godot/imported/Mc placeholder sprite1.png-52a65ade16ec29dae717cd81d5b78663.ctex"]
 
 [params]
 
