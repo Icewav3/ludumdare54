@@ -5,15 +5,15 @@ var state
 @onready var effect = get_tree().root.get_node("GlobalScene/EffectsPlayer")
 var globalScene = preload("res://scripts/StateManager.gd")
 
+signal change_level
+
 func _ready():
 	state = globalScene.get_data()
 
 func _process(delta):
 		if startButton.button_pressed:
-			#get_child(1).queue_free() removed this and it works?
-			add_child(state["level1"].instantiate())
+			emit_signal("change_level")
 			effect.play_sound("button")
-			set_process(false)
-
-func change_level():
-	pass
+			queue_free()
+			
+			#get_child(1).queue_free() removed this and it works?
