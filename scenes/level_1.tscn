@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://crfjuy5nxnohg"]
+[gd_scene load_steps=21 format=3 uid="uid://crfjuy5nxnohg"]
 
 [ext_resource type="PackedScene" uid="uid://bs6oe80hi2165" path="res://scenes/player.tscn" id="1_fmxc3"]
 [ext_resource type="Script" path="res://scenes/level_1.gd" id="1_iq44c"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://b6eirurl8va82" path="res://sprites/walls/BottomWall.png" id="5_3jv60"]
 [ext_resource type="Texture2D" uid="uid://bermn3qj61xv3" path="res://sprites/Tilemaps/FloorShadows.png" id="5_lyevv"]
 [ext_resource type="PackedScene" uid="uid://dkbwofb4pu61t" path="res://scenes/Dialogue.tscn" id="7_j7io2"]
+[ext_resource type="Texture2D" uid="uid://20lviqkons0b" path="res://sprites/Small elevator and phone.png" id="7_lc655"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rjm5b"]
 texture = ExtResource("2_orvwo")
@@ -135,6 +136,10 @@ position = Vector2(128, 64)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Top"]
 position = Vector2(32, 24)
 shape = SubResource("RectangleShape2D_ei1it")
+
+[node name="Buttons" type="Sprite2D" parent="."]
+position = Vector2(160, 72)
+texture = ExtResource("7_lc655")
 
 [node name="Player" parent="." instance=ExtResource("1_fmxc3")]
 position = Vector2(160, 120)
