@@ -2,6 +2,7 @@ extends Node2D
 
 var state
 @onready var startButton = $StartButton
+@onready var effect = get_tree().root.get_node("GlobalScene/EffectsPlayer")
 var globalScene = preload("res://scripts/StateManager.gd")
 
 func _ready():
@@ -11,4 +12,8 @@ func _process(delta):
 		if startButton.button_pressed:
 			#get_child(1).queue_free() removed this and it works?
 			add_child(state["level1"].instantiate())
+			effect.play_sound("button")
 			set_process(false)
+
+func change_level():
+	pass
