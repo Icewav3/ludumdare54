@@ -2,7 +2,7 @@ extends Node2D
 
 @export var debug : bool
 
-var state = {"menulevel": preload("res://scenes/MainMenu.tscn"),
+static var state = {"menulevel": preload("res://scenes/MainMenu.tscn"),
 			 "level1": preload("res://scenes/level_1.tscn"),
 			 "level2": preload("res://scenes/level_2.tscn"),
 			 "level3": preload("res://scenes/level_3.tscn")}
@@ -16,13 +16,9 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
-	
-	
-func _input(event):
-	if event is InputEventKey:
-		if event.pressed:
-			get_child(1).queue_free()
-			add_child(state["level1"].instantiate())
+
+static func get_data():
+	return state
 			
 	
 	

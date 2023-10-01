@@ -230,7 +230,7 @@ transitions = ["Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_
 [sub_resource type="AnimationNodeTimeSeek" id="AnimationNodeTimeSeek_l0evc"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_dss7g"]
-graph_offset = Vector2(-447.395, 81.6341)
+graph_offset = Vector2(-564.986, 150.815)
 nodes/StateMachine/node = SubResource("AnimationNodeStateMachine_jjxli")
 nodes/StateMachine/position = Vector2(-80, 220)
 nodes/TimeSeek/node = SubResource("AnimationNodeTimeSeek_l0evc")
