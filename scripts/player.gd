@@ -36,7 +36,7 @@ func _physics_process(_delta):
 		animation_vector[currentDirection] = input_vector[currentDirection]
 		
 		animationTree.set("parameters/StateMachine/Idle/blend_position", animation_vector)
-		animationTree.set("parameters/StateMachine/Walk/blend_position", animation_vector)
+		animationTree.set("parameters/StateMachine/Walk/blend_position", animation_vector)#THIS CODE IS NOT NEEDED
 
 		animationState.travel("Walk")
 	else:
