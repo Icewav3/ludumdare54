@@ -41,6 +41,7 @@ func _input(event) :
 			pass'''
 func show_dialogue(value : bool):
 	# Check if there are more dialogues to display
+	#print(current_dialogue_index < len(dialogues), value)
 	if current_dialogue_index < len(dialogues) and value == true:
 		character_sprite.visible = true
 		$DialogBox.visible = true

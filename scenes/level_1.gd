@@ -8,8 +8,7 @@ func _ready():
 	state = globalScene.get_data()
 
 func _process(delta):
-		if startButton.button_pressed:
-			pass
+	pass
 
 func complete_level():
 	add_child(state["level2"].instantiate())
