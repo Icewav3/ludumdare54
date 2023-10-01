@@ -25,7 +25,7 @@ var dialogues = [
 	}
 ]
 func _ready():
-	character_sprite.texture = dialogues[current_dialogue_index]["char_sprite"]#TODO nil value
+	character_sprite.texture = dialogues[current_dialogue_index]["char_sprite"]
 	show_dialogue(false)
 
 func _process(delta):

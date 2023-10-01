@@ -1,0 +1,113 @@
+[gd_scene load_steps=4 format=3 uid="uid://8ngpp18n81c"]
+
+[ext_resource type="Texture2D" uid="uid://bvex4uvsjqjma" path="res://sprites/Elevator panel.png" id="1_su8mq"]
+[ext_resource type="Texture2D" uid="uid://cvm452ugpci86" path="res://sprites/Button 1 out.png" id="2_st5u7"]
+[ext_resource type="Texture2D" uid="uid://blr5cv444ec7w" path="res://sprites/Button 1 pushed in.png" id="3_ywach"]
+
+[node name="ButtonPanel" type="Node2D"]
+
+[node name="Black" type="ColorRect" parent="."]
+offset_right = 320.0
+offset_bottom = 192.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(146, 80)
+texture = ExtResource("1_su8mq")
+
+[node name="button1" type="TextureButton" parent="."]
+offset_left = 95.0
+offset_top = 38.0
+offset_right = 108.0
+offset_bottom = 50.0
+texture_normal = ExtResource("2_st5u7")
+texture_pressed = ExtResource("3_ywach")
+
+[node name="button2" type="TextureButton" parent="."]
+offset_left = 111.0
+offset_top = 38.0
+offset_right = 124.0
+offset_bottom = 50.0
+texture_normal = ExtResource("2_st5u7")
+texture_pressed = ExtResource("3_ywach")
+
+[node name="button3" type="TextureButton" parent="."]
+offset_left = 126.0
+offset_top = 38.0
+offset_right = 139.0
+offset_bottom = 50.0
+texture_normal = ExtResource("2_st5u7")
+texture_pressed = ExtResource("3_ywach")
+
+[node name="button4" type="TextureButton" parent="."]
+offset_left = 95.0
+offset_top = 53.0
+offset_right = 108.0
+offset_bottom = 65.0
+texture_normal = ExtResource("2_st5u7")
+texture_pressed = ExtResource("3_ywach")
+
+[node name="button5" type="TextureButton" parent="."]
+offset_left = 111.0
+offset_top = 53.0
+offset_right = 124.0
+offset_bottom = 65.0
+texture_normal = ExtResource("2_st5u7")
+texture_pressed = ExtResource("3_ywach")
+
+[node name="button6" type="TextureButton" parent="."]
+offset_left = 127.0
+offset_top = 53.0
+offset_right = 140.0
+offset_bottom = 65.0
+texture_normal = ExtResource("3_ywach")
+texture_pressed = ExtResource("3_ywach")
+
+[node name="button7" type="TextureButton" parent="."]
+offset_left = 95.0
+offset_top = 67.0
+offset_right = 108.0
+offset_bottom = 79.0
+texture_normal = ExtResource("2_st5u7")
+texture_pressed = ExtResource("3_ywach")
+
+[node name="button8" type="TextureButton" parent="."]
+offset_left = 111.0
+offset_top = 67.0
+offset_right = 124.0
+offset_bottom = 79.0
+texture_normal = ExtResource("2_st5u7")
+texture_pressed = ExtResource("3_ywach")
+
+[node name="button9" type="TextureButton" parent="."]
+offset_left = 126.0
+offset_top = 67.0
+offset_right = 139.0
+offset_bottom = 79.0
+texture_normal = ExtResource("2_st5u7")
+texture_pressed = ExtResource("3_ywach")
+
+[node name="button10" type="TextureButton" parent="."]
+offset_left = 95.0
+offset_top = 81.0
+offset_right = 108.0
+offset_bottom = 93.0
+texture_normal = ExtResource("2_st5u7")
+texture_pressed = ExtResource("3_ywach")
+
+[node name="button11" type="TextureButton" parent="."]
+offset_left = 111.0
+offset_top = 81.0
+offset_right = 124.0
+offset_bottom = 93.0
+texture_normal = ExtResource("2_st5u7")
+texture_pressed = ExtResource("3_ywach")
+
+[node name="button12" type="TextureButton" parent="."]
+offset_left = 126.0
+offset_top = 81.0
+offset_right = 139.0
+offset_bottom = 93.0
+texture_normal = ExtResource("2_st5u7")
+texture_pressed = ExtResource("3_ywach")
