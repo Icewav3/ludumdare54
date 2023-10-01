@@ -1,7 +1,7 @@
 extends Control
 
-var img = {"mcnormal": preload  ("res://sprites/Mc placeholder sprite1.png"),
-		   "mcscare": preload ("res://sprites/Mc placeholder sprite2.png")}
+var img = {"mcnormal": preload  ("res://sprites/Main character calm.png"),
+		   "mcscare": preload ("res://sprites/Main character nervous.png")}
 @onready var character_sprite = $mc		   
 var current_dialogue_index = 0
 
