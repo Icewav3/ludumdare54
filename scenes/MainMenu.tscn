@@ -1,11 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://6fbgf0kosrqu"]
+[gd_scene load_steps=5 format=3 uid="uid://6fbgf0kosrqu"]
 
 [ext_resource type="Texture2D" uid="uid://bv8wges1qrefy" path="res://sprites/elev-0.png" id="1_ebp4x"]
 [ext_resource type="Script" path="res://scripts/MainMenu.gd" id="1_en5ij"]
 [ext_resource type="Texture2D" uid="uid://df6fjy51e1jxg" path="res://sprites/Enclosed Title back panel .png" id="2_6h3bd"]
 [ext_resource type="Texture2D" uid="uid://lqy7kfp76pxu" path="res://sprites/Enclosed title png.png" id="3_4sgs7"]
-[ext_resource type="Texture2D" uid="uid://ce7iwggxaifr3" path="res://sprites/Start button1.png" id="5_fojt8"]
-[ext_resource type="Texture2D" uid="uid://dsawnaj2r21fs" path="res://sprites/Start button pushed in.png" id="6_fv51g"]
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_en5ij")
@@ -21,11 +19,3 @@ texture = ExtResource("2_6h3bd")
 [node name="title" type="Sprite2D" parent="."]
 position = Vector2(160, 90)
 texture = ExtResource("3_4sgs7")
-
-[node name="StartButton" type="TextureButton" parent="."]
-offset_left = -1.0
-offset_right = 319.0
-offset_bottom = 180.0
-action_mode = 0
-texture_normal = ExtResource("5_fojt8")
-texture_pressed = ExtResource("6_fv51g")

@@ -1,57 +1,55 @@
 extends Control
 
-var texture1 = preload("res://sprites/mc/Mc placeholder sprite1.png")
-var texture2 = preload("res://sprites/mc/Mc placeholder sprite2.png")
-
 var img = {"mcnormal": preload  ("res://sprites/Mc placeholder sprite1.png"),
 		   "mcscare": preload ("res://sprites/Mc placeholder sprite2.png")}
-		
-#idk a way to create simulate a visual novel dialogue without creating an entire library so imma put it in 
-#an array for now. We can just itera
-var dialogue1 = ["Oh look an elevator", "crap"]
-var dialogue2 = ["The risk I took was calculated but man.", "I am bad at math"]
+@onready var character_sprite = $mc		   
+var current_dialogue_index
 
-var dialogIndex = 0
-var finished = false
-
-@onready var sprite = $mc
-@onready var dbox = $DialogBox
-
+# list of dictionaries for dialogue
+var dialogues = [
+	{
+		"text": "Oh look, an elevator!",
+		"char_sprite": img["mcnormal"]
+	},
+	{
+		"text": "crap",
+		"char_sprite": img["mcscare"]
+	},
+	{
+		"text": "The risk I took was calculated but man. I am bad at math",
+		"char_sprite": img["mcscare"]
+	}
+]
 func _ready():
-	sprite.texture = null
-	dbox.visible = false;
-	
+	character_sprite.texture = dialogues[current_dialogue_index]["char_sprite"]#TODO nil value
+	show_dialogue(false)
+	print("hi")
+
 func _process(delta):
-	load_dialog()
-	
+	show_dialogue(bool(current_dialogue_index))
+	print(bool(current_dialogue_index))
+		
 func _input(event) :
-	if event.is_action_pressed("ui_page_up"):
-		sprite.texture = img["mcscare"]
-		sprite.visible = true;
-		dbox.visible = true;
-	if event.is_action_pressed("ui_page_down"):
-		sprite.texture = img["mcnormal"]
-		sprite.visible = true;
-		dbox.visible = true;
-	if event.is_action_pressed("ui_end"):
-		if sprite.visible:
-			sprite.visible = false 
-			dbox.visible = false
-	
-	if dbox.visible:
-		if event.is_action_pressed("ui_accept"):
-			dialogIndex+=1
-			if dialogIndex == dialogue1.size():
-				dbox.visible = false
-				sprite.visible = false
-				dialogIndex=0
-
-
-func load_dialog():
-	if dialogIndex < dialogue1.size():
-		$DialogBox/RichTextLabel.bbcode_text = dialogue1[dialogIndex]
-		if Input.is_key_pressed(KEY_L):
-			dialogIndex+=1
-			$DialogBox/RichTextLoabel.bbcode_text = dialogue1[dialogIndex]
-		print (dialogue1[dialogIndex][dialogIndex])
-	
+	if event.is_action_pressed("space"): # UI next input map for spacebar
+		current_dialogue_index += 1
+		print("space pressed")
+		print(current_dialogue_index)
+'''		if current_dialogue_index >= len(dialogues):
+					current_dialogue_index = 0  # Reset to the first dialogue
+		else:
+			pass'''
+func show_dialogue(value : bool):
+	# Check if there are more dialogues to display
+	if current_dialogue_index < len(dialogues) and value == true:
+		character_sprite.visible = true
+		$DialogBox.visible = true
+		var dialogue_text = dialogues[current_dialogue_index]["text"]
+		# Display the dialogue text using your dialogue system
+		# For example, you might have a Label node for this purpose
+		$DialogBox/RichTextLabel.bbcode_text = dialogue_text
+		
+		# Update the character sprite
+		character_sprite.texture = dialogues[current_dialogue_index]["char_sprite"]
+	else:
+		character_sprite.visible = false
+		$DialogBox.visible = false
