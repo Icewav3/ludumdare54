@@ -8,11 +8,15 @@ var current_dialogue_index = 0
 # list of dictionaries for dialogue
 var dialogues = [
 	{
+		"text": "",
+		"char_sprite": img["mcnormal"]
+	},
+	{
 		"text": "Oh look, an elevator!",
 		"char_sprite": img["mcnormal"]
 	},
 	{
-		"text": "crap",
+		"text": "...crap",
 		"char_sprite": img["mcscare"]
 	},
 	{
@@ -23,16 +27,13 @@ var dialogues = [
 func _ready():
 	character_sprite.texture = dialogues[current_dialogue_index]["char_sprite"]#TODO nil value
 	show_dialogue(false)
-	print("hi")
 
 func _process(delta):
 	show_dialogue(bool(current_dialogue_index))
-	print(bool(current_dialogue_index))
 		
 func _input(event) :
 	if event.is_action_pressed("space"): # UI next input map for spacebar
-		current_dialogue_index = 1
-		print("space pressed")
+		current_dialogue_index += 1
 		print(current_dialogue_index)
 '''		if current_dialogue_index >= len(dialogues):
 					current_dialogue_index = 0  # Reset to the first dialogue
