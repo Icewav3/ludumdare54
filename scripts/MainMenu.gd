@@ -11,4 +11,4 @@ func _process(delta):
 		if startButton.button_pressed:
 			#get_child(1).queue_free() removed this and it works?
 			add_child(state["level1"].instantiate())
-
+			set_process(false)
