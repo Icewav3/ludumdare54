@@ -3,7 +3,7 @@ extends Control
 var img = {"mcnormal": preload  ("res://sprites/Mc placeholder sprite1.png"),
 		   "mcscare": preload ("res://sprites/Mc placeholder sprite2.png")}
 @onready var character_sprite = $mc		   
-var current_dialogue_index
+var current_dialogue_index = 0
 
 # list of dictionaries for dialogue
 var dialogues = [
@@ -31,7 +31,7 @@ func _process(delta):
 		
 func _input(event) :
 	if event.is_action_pressed("space"): # UI next input map for spacebar
-		current_dialogue_index += 1
+		current_dialogue_index = 1
 		print("space pressed")
 		print(current_dialogue_index)
 '''		if current_dialogue_index >= len(dialogues):

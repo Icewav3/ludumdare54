@@ -9,6 +9,4 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if startButton.button_pressed:
-		#Todo Logic here for transition to level 1? or dialogue ui
-		print("Pressed!")
+	
