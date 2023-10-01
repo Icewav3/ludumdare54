@@ -23,9 +23,9 @@ position = Vector2(160, 90)
 texture = ExtResource("3_4sgs7")
 
 [node name="StartButton" type="TextureButton" parent="."]
-offset_top = 1.0
-offset_right = 320.0
-offset_bottom = 181.0
+offset_left = -1.0
+offset_right = 319.0
+offset_bottom = 180.0
 action_mode = 0
 texture_normal = ExtResource("5_fojt8")
 texture_pressed = ExtResource("6_fv51g")

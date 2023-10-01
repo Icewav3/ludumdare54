@@ -43,4 +43,4 @@ theme_override_colors/default_color = Color(1, 0.666667, 1, 1)
 theme_override_colors/font_shadow_color = Color(0.776471, 0.133333, 1, 1)
 theme_override_fonts/normal_font = ExtResource("4_xjbxr")
 theme_override_font_sizes/normal_font_size = 10
-text = "Toyota"
+text = "placeholder"
