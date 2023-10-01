@@ -18,7 +18,6 @@ func _process(_delta):
 	pass
 	
 func on_level_changed():
-	print("test")
 	$AnimationPlayer.play("FadeOut")
 	
 func change_level():

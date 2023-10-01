@@ -1,7 +1,6 @@
 extends Node2D
 
 var state
-@onready var startButton = $StartButton
 @onready var effect = get_tree().root.get_node("GlobalScene/EffectsPlayer")
 var globalScene = preload("res://scripts/StateManager.gd")
 
