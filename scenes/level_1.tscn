@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://crfjuy5nxnohg"]
+[gd_scene load_steps=24 format=3 uid="uid://crfjuy5nxnohg"]
 
 [ext_resource type="PackedScene" uid="uid://bs6oe80hi2165" path="res://scenes/player.tscn" id="1_fmxc3"]
 [ext_resource type="Script" path="res://scenes/level_1.gd" id="1_iq44c"]
@@ -9,6 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://bermn3qj61xv3" path="res://sprites/Tilemaps/FloorShadows.png" id="5_lyevv"]
 [ext_resource type="PackedScene" uid="uid://dkbwofb4pu61t" path="res://scenes/Dialogue.tscn" id="7_j7io2"]
 [ext_resource type="Texture2D" uid="uid://20lviqkons0b" path="res://sprites/Small elevator and phone.png" id="7_lc655"]
+[ext_resource type="Texture2D" uid="uid://cut1ndjr2p68d" path="res://sprites/Sticky note not zoomed in .png" id="8_xolqi"]
+[ext_resource type="PackedScene" uid="uid://8ngpp18n81c" path="res://scenes/objects/button_panel.tscn" id="10_07n15"]
+[ext_resource type="Texture2D" uid="uid://cdvhjmeow77tc" path="res://sprites/Sticky note with code.png" id="11_46rul"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rjm5b"]
 texture = ExtResource("2_orvwo")
@@ -149,9 +152,36 @@ offset_right = 8.0
 offset_bottom = 8.0
 disabled = true
 
+[node name="Sticky Note" type="Sprite2D" parent="."]
+position = Vector2(136, 40)
+texture = ExtResource("8_xolqi")
+
+[node name="StickyButton" type="Button" parent="Sticky Note"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = 8.0
+
 [node name="Player" parent="." instance=ExtResource("1_fmxc3")]
 position = Vector2(160, 120)
 
 [node name="Dialogue" parent="." instance=ExtResource("7_j7io2")]
 
+[node name="Note" type="Node2D" parent="."]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="Note"]
+offset_right = 320.0
+offset_bottom = 192.0
+color = Color(0, 0, 0, 1)
+
+[node name="Sticky Note Big" type="Sprite2D" parent="Note"]
+position = Vector2(160, 96)
+texture = ExtResource("11_46rul")
+
+[node name="ButtonPanel" parent="." instance=ExtResource("10_07n15")]
+visible = false
+
 [connection signal="button_down" from="Buttons/Button" to="." method="_on_button_button_down"]
+[connection signal="button_down" from="Sticky Note/StickyButton" to="." method="_on_sticky_button_button_down"]

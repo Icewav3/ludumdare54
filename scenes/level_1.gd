@@ -11,8 +11,16 @@ func _ready():
 	state = globalScene.get_data()
 	effect.play_sound("hum")
 
-func _process(delta):
-	pass
+func _process(_delta):
+	if Input.is_action_just_pressed("space"):
+		if $Note.visible:
+			$Note.visible = false
+			$"Sticky Note/StickyButton".disabled = false
+			$Player.set_physics_process(true)
+		elif $ButtonPanel.visible:
+			$Buttons/Button.disabled = false
+			$Player.set_physics_process(true)
+			$ButtonPanel.visible = false
 
 func complete_level():
 	add_child(state["level2"].instantiate())
@@ -21,4 +29,9 @@ func complete_level():
 func _on_button_button_down():
 	$Buttons/Button.disabled = true
 	$Player.set_physics_process(false)
-	$Player.add_sibling(buttonPanel.instantiate())
+	$ButtonPanel.visible = true
+
+func _on_sticky_button_button_down():
+	$"Sticky Note/StickyButton".disabled = true
+	$Player.set_physics_process(false)
+	$Note.visible = true

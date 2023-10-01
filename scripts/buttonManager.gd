@@ -1,7 +1,7 @@
 extends Node
 var children = []
 var buttonlist = []
-var buttonsolution = [2,5,3,9,1,4]
+var buttonsolution = [2, 5, 3, 9, 1, 4]
 var playersolution = []
 var index = []
 
@@ -27,4 +27,11 @@ func _process(delta):
 			print(playersolution)'''
 			
 func on_button_press(number):
-	print(number)
+	playersolution.append(number)
+	if len(playersolution) > 6:
+		playersolution.remove_at(0)
+		
+	print(playersolution)
+		
+	if playersolution == buttonsolution:
+		print("test")
