@@ -1,6 +1,7 @@
-[gd_scene load_steps=19 format=3 uid="uid://crfjuy5nxnohg"]
+[gd_scene load_steps=20 format=3 uid="uid://crfjuy5nxnohg"]
 
 [ext_resource type="PackedScene" uid="uid://bs6oe80hi2165" path="res://scenes/player.tscn" id="1_fmxc3"]
+[ext_resource type="Script" path="res://scenes/level_1.gd" id="1_iq44c"]
 [ext_resource type="Texture2D" uid="uid://doki406amgjeq" path="res://sprites/walls/FloorTiles.png" id="2_orvwo"]
 [ext_resource type="Texture2D" uid="uid://bbxtl7mmwiayw" path="res://sprites/walls/topwall.png" id="3_5x3e2"]
 [ext_resource type="Texture2D" uid="uid://ib1nfflxwjr7" path="res://sprites/walls/midwall.png" id="4_rppw0"]
@@ -76,6 +77,7 @@ size = Vector2(64, 16)
 size = Vector2(64, 16)
 
 [node name="Level1" type="Node2D"]
+script = ExtResource("1_iq44c")
 
 [node name="Black" type="ColorRect" parent="."]
 offset_right = 320.0

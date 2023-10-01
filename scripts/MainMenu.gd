@@ -14,6 +14,6 @@ func _process(delta):
 		if startButton.button_pressed:
 			emit_signal("change_level")
 			effect.play_sound("button")
-			queue_free()
+			set_process(false)
 			
 			#get_child(1).queue_free() removed this and it works?

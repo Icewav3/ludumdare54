@@ -10,7 +10,7 @@ var currentState = state["menulevel"]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	add_child(state["menulevel"].instantiate())
+	$testsprite.add_sibling(state["menulevel"].instantiate())
 	$MainMenu.connect("change_level",Callable(self,"on_level_changed"))
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -18,7 +18,14 @@ func _process(_delta):
 	pass
 	
 func on_level_changed():
+	print("test")
+	$AnimationPlayer.play("FadeOut")
+	
+func change_level():
+	$MainMenu.queue_free()
 	$testsprite.add_sibling(state["level1"].instantiate())
+	$AnimationPlayer.play("FadeIn")
+	$MusicPlayer.play_sound("level1")
 
 static func get_data():
 	return state
