@@ -160,6 +160,21 @@ texture_pressed = ExtResource("26_7qxtl")
 script = ExtResource("5_0cibt")
 num = 12
 
+[node name="End" type="Node2D" parent="."]
+visible = false
+
+[node name="Black" type="ColorRect" parent="End"]
+offset_right = 320.0
+offset_bottom = 192.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="End"]
+offset_left = 48.0
+offset_top = 80.0
+offset_right = 285.0
+offset_bottom = 106.0
+text = "YOU WIN! (we ran out of time!)"
+
 [connection signal="button_down" from="1" to="1" method="_on_button_down"]
 [connection signal="button_down" from="2" to="2" method="_on_button_down"]
 [connection signal="button_down" from="3" to="3" method="_on_button_down"]

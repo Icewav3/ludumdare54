@@ -34,4 +34,4 @@ func on_button_press(number):
 	print(playersolution)
 		
 	if playersolution == buttonsolution:
-		print("test")
+		$End.visible = true
