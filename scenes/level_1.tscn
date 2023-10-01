@@ -141,7 +141,17 @@ shape = SubResource("RectangleShape2D_ei1it")
 position = Vector2(160, 72)
 texture = ExtResource("7_lc655")
 
+[node name="Button" type="Button" parent="Buttons"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -8.0
+offset_top = -16.0
+offset_right = 8.0
+offset_bottom = 8.0
+disabled = true
+
 [node name="Player" parent="." instance=ExtResource("1_fmxc3")]
 position = Vector2(160, 120)
 
 [node name="Dialogue" parent="." instance=ExtResource("7_j7io2")]
+
+[connection signal="button_down" from="Buttons/Button" to="." method="_on_button_button_down"]

@@ -30,7 +30,7 @@ func _process(delta):
 func _input(event) :
 	if event.is_action_pressed("space"): # UI next input map for spacebar
 		current_dialogue_index += 1
-		print(current_dialogue_index)
+		# print(current_dialogue_index)
 '''		if current_dialogue_index >= len(dialogues):
 					current_dialogue_index = 0  # Reset to the first dialogue
 		else:
@@ -52,3 +52,4 @@ func show_dialogue(value : bool):
 		character_sprite.visible = false
 		$DialogBox.visible = false
 		get_parent().get_node("Player").set_physics_process(true)
+		get_parent().get_node("Buttons/Button").disabled = false
