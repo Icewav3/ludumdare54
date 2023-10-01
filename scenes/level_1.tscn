@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://ib1nfflxwjr7" path="res://sprites/walls/midwall.png" id="4_rppw0"]
 [ext_resource type="Texture2D" uid="uid://b6eirurl8va82" path="res://sprites/walls/BottomWall.png" id="5_3jv60"]
 [ext_resource type="Texture2D" uid="uid://bermn3qj61xv3" path="res://sprites/Tilemaps/FloorShadows.png" id="5_lyevv"]
-[ext_resource type="PackedScene" uid="uid://dkbwofb4pu61t" path="res://scenes/Dialogue.tscn" id="7_0oluh"]
+[ext_resource type="PackedScene" uid="uid://dkbwofb4pu61t" path="res://scenes/Dialogue.tscn" id="7_j7io2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rjm5b"]
 texture = ExtResource("2_orvwo")
@@ -84,6 +84,7 @@ color = Color(0, 0, 0, 1)
 metadata/_edit_lock_ = true
 
 [node name="Box" type="ReferenceRect" parent="."]
+visible = false
 offset_left = 128.0
 offset_top = 16.0
 offset_right = 192.0
@@ -136,4 +137,4 @@ shape = SubResource("RectangleShape2D_ei1it")
 [node name="Player" parent="." instance=ExtResource("1_fmxc3")]
 position = Vector2(160, 96)
 
-[node name="Dialogue" parent="." instance=ExtResource("7_0oluh")]
+[node name="Dialogue" parent="." instance=ExtResource("7_j7io2")]

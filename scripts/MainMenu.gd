@@ -1,14 +1,14 @@
 extends Node2D
 
-
+var state
 @onready var startButton = $StartButton
+var globalScene = preload("res://scripts/StateManager.gd")
 
 func _ready():
-	pass # Replace with function body.
+	state = globalScene.get_data()
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if startButton.button_pressed:
-		#Todo Logic here for transition to level 1? or dialogue ui
-		print("Pressed!")
+		if startButton.button_pressed:
+			#get_child(1).queue_free() removed this and it works?
+			add_child(state["level1"].instantiate())
+			set_process(false)

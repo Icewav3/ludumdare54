@@ -45,6 +45,7 @@ func _physics_process(_delta):
 	directionFacing = animationTree.get("parameters/StateMachine/Idle/blend_position")
 	
 	velocity = input_vector
+
 	
 	set_velocity(velocity * SPEED)
 	move_and_slide()
