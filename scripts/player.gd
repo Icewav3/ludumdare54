@@ -1,25 +1,34 @@
 extends CharacterBody2D
 
 
-const SPEED = 80.0
+const SPEED = 40
 
-var directionFacing = Vector2(0, 1)
+@export var directionFacing = Vector2(0, 1)
 
-var currentDirection = 1
-var otherDirection = 0
+@export var currentDirection = 1
+@export var otherDirection = 0
+
+var input_vector = Vector2.ZERO
 
 @onready var animationPlayer = $AnimationPlayer
 @onready var animationTree = $AnimationTree
 @onready var animationState = animationTree.get("parameters/StateMachine/playback")
 
 func _physics_process(_delta):
-	var input_vector = Vector2.ZERO
-	input_vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
-	input_vector.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
-	if Input.get_action_strength("ui_left") == 1 and Input.get_action_strength("ui_right") == 1:
+	input_vector.x = 0
+	input_vector.y = 0
+	
+	if Input.is_action_pressed("ui_left"):
 		input_vector.x = -1
-	if Input.get_action_strength("ui_up") == 1 and Input.get_action_strength("ui_down") == 1:
-		input_vector.y = -1
+	
+	if Input.is_action_pressed("ui_right"):
+		input_vector.x = +1
+		
+	if Input.is_action_pressed("ui_up"):
+		input_vector.y = -1 
+		
+	if Input.is_action_pressed("ui_down"):
+		input_vector.y = +1
 		
 	if input_vector[currentDirection] == 0:
 		if input_vector[otherDirection] != 0:
@@ -30,6 +39,8 @@ func _physics_process(_delta):
 				1:
 					currentDirection = 0
 					otherDirection = 1
+		
+		
 					
 	if input_vector != Vector2.ZERO:
 		var animation_vector = Vector2.ZERO
@@ -48,3 +59,11 @@ func _physics_process(_delta):
 	
 	set_velocity(velocity * SPEED)
 	move_and_slide()
+	
+
+	print ("X vector : ", input_vector.x)
+	print ("Y Vector : ", input_vector.y)
+	
+
+
+

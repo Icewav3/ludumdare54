@@ -1,3 +1,44 @@
-[gd_scene format=3 uid="uid://blel7xem5p4no"]
+[gd_scene load_steps=5 format=3 uid="uid://blel7xem5p4no"]
+
+[ext_resource type="Texture2D" uid="uid://b6dqsxq3a0tj4" path="res://sprites/Tilemaps/lv3tileset.png" id="1_ss5hq"]
+[ext_resource type="Texture2D" uid="uid://bykvkqvs8duap" path="res://sprites/Main character front view.png" id="2_kod87"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_36snd"]
+texture = ExtResource("1_ss5hq")
+0:1/0 = 0
+1:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_xta6b"]
+sources/0 = SubResource("TileSetAtlasSource_36snd")
 
 [node name="level_3" type="Node2D"]
+
+[node name="Black" type="ColorRect" parent="."]
+offset_right = 320.0
+offset_bottom = 192.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_lock_ = true
+
+[node name="Box" type="ReferenceRect" parent="."]
+offset_left = 128.0
+offset_top = 16.0
+offset_right = 192.0
+offset_bottom = 144.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Lv3Tilemap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_xta6b")
+format = 2
+layer_0/tile_data = PackedInt32Array(458760, 131072, 2, 524296, 131072, 3, 458761, 196608, 2, 524297, 196608, 3, 458762, 131072, 2, 524298, 131072, 3, 458763, 196608, 2, 524299, 196608, 3, 327690, 131072, 2, 393226, 131072, 3, 327691, 196608, 2, 393227, 196608, 3, 327688, 131072, 2, 393224, 131072, 3, 327689, 196608, 2, 393225, 196608, 3, 196616, 0, 2, 196617, 65536, 2, 196618, 0, 2, 196619, 65536, 2, 131082, 0, 2, 131083, 65536, 2, 131080, 0, 2, 131081, 65536, 2, 65544, 0, 1, 65545, 65536, 1, 65546, 0, 1, 65547, 65536, 1, 262152, 0, 3, 262153, 65536, 3, 262154, 0, 3, 262155, 65536, 3)
+
+[node name="MainCharacterFrontView" type="Sprite2D" parent="."]
+position = Vector2(160, 97)
+texture = ExtResource("2_kod87")

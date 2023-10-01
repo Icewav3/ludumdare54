@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=3 uid="uid://dkbwofb4pu61t"]
+
+[ext_resource type="Script" path="res://scripts/DialogueController.gd" id="1_asrm8"]
+[ext_resource type="Texture2D" uid="uid://b0pxjg1vt4y3u" path="res://sprites/mc/Mc placeholder sprite1.png" id="2_15nxf"]
+[ext_resource type="Texture2D" uid="uid://df6fjy51e1jxg" path="res://sprites/Enclosed Title back panel .png" id="3_4jp0n"]
+
+[node name="Dialogue" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_asrm8")
+
+[node name="mc" type="Sprite2D" parent="."]
+position = Vector2(244, 106)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("2_15nxf")
+
+[node name="testdialogbox" type="Sprite2D" parent="."]
+position = Vector2(160, 199)
+texture = ExtResource("3_4jp0n")
+
+[node name="dialoguetext" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 78.0
+offset_top = 128.0
+offset_right = 230.0
+offset_bottom = 165.0
+text = "
+"
+scroll_active = false
+deselect_on_focus_loss_enabled = false
