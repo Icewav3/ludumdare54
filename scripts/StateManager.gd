@@ -28,5 +28,3 @@ func change_level():
 
 static func get_data():
 	return state
-			
-	

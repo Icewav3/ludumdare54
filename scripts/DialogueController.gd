@@ -1,11 +1,18 @@
 extends Control
 
-var img = {"mcnormal": preload  ("res://sprites/Main character calm.png"),
-		   "mcscare": preload ("res://sprites/Main character nervous.png")}
-@onready var character_sprite = $mc		   
+# Dictionary containing the character sprites
+var img = {
+	"mcnormal": preload("res://sprites/Main character calm.png"),
+	"mcscare": preload("res://sprites/Main character nervous.png")
+}
+
+# Reference to the character sprite node
+@onready var character_sprite = $mc
+
+# Index of the current dialogue in the dialogues list
 var current_dialogue_index = 0
 
-# list of dictionaries for dialogue
+# List of dictionaries representing the dialogues
 var dialogues = [
 	{
 		"text": "Oh look, an elevator!",
@@ -20,33 +27,28 @@ var dialogues = [
 		"char_sprite": img["mcscare"]
 	}
 ]
+
 func _ready():
+	# Set the initial character sprite and show the dialogue
 	character_sprite.texture = dialogues[current_dialogue_index]["char_sprite"]
 	show_dialogue(true)
 
 func _process(delta):
+	# Continuously show the dialogue
 	show_dialogue(true)
-		
-func _input(event) :
-	if event.is_action_pressed("space"): # UI next input map for spacebar
+
+func _input(event):
+	if event.is_action_pressed("space"):
+		# Move to the next dialogue when the spacebar is pressed
 		current_dialogue_index += 1
-		# print(current_dialogue_index)
-'''		if current_dialogue_index >= len(dialogues):
-					current_dialogue_index = 0  # Reset to the first dialogue
-		else:
-			pass'''
-func show_dialogue(value : bool):
+
+func show_dialogue(value: bool):
 	# Check if there are more dialogues to display
-	#print(current_dialogue_index < len(dialogues), value)
 	if current_dialogue_index < len(dialogues) and value == true:
 		character_sprite.visible = true
 		$DialogBox.visible = true
 		var dialogue_text = dialogues[current_dialogue_index]["text"]
-		# Display the dialogue text using your dialogue system
-		# For example, you might have a Label node for this purpose
 		$DialogBox/RichTextLabel.bbcode_text = dialogue_text
-		
-		# Update the character sprite
 		character_sprite.texture = dialogues[current_dialogue_index]["char_sprite"]
 	else:
 		character_sprite.visible = false
